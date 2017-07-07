@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop | Product {{ product.id }}</title>
+</head>
+<body>
+    <h1>{{ product.name }}</h1>
+
+    <p>{{ product.description }}</p>
+
+    <a href="{% url 'shop:product_list' %}">Back to full list</a>
+</body>
+</html>
