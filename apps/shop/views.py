@@ -1,9 +1,9 @@
 from django.shortcuts import render
 
 
-class ProductsListByCategoryView():
+class ProductsListByCategoryView:
     pass
 
 
-class ProductDetailView():
+class ProductDetailView:
     pass

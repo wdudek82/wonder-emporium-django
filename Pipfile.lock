@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "1b8bc3a5aca4a6aed73b6c3eb7e8a4c96a7b27ac90db01571113826b07f5d4fd"
+            "sha256": "bab3041d7b71d36d4cde73e17aa7deff0ac46c127510da7c2b506357931b6753"
         },
         "requires": {},
         "sources": [
@@ -12,7 +12,18 @@
         ]
     },
     "default": {
-        "python": "*"
+        "django": {
+            "version": "==1.11.3"
+        },
+        "olefile": {
+            "version": "==0.44"
+        },
+        "pillow": {
+            "version": "==4.2.1"
+        },
+        "pytz": {
+            "version": "==2017.2"
+        }
     },
     "develop": {}
 }
