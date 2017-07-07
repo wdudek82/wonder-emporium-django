@@ -20,6 +20,7 @@ class ProductAdmin(admin.ModelAdmin):
 
     def get_image(self, instance):
         image = instance.image
-        return mark_safe('<img src ="{}">'.format(image.url)) if image else '-'
+        css_style = 'max-width:200px; max-height: 200px;'
+        return mark_safe('<img src ="{}" style="{}">'.format(image.url, css_style)) if image else '-'
     get_image.short_description = 'image'
 
