@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "bab3041d7b71d36d4cde73e17aa7deff0ac46c127510da7c2b506357931b6753"
+            "sha256": "9422dd8162570a3ebcf2e749b289f6084d02aa83b5b201559c004963a1ef2057"
         },
         "requires": {},
         "sources": [
@@ -23,7 +23,23 @@
         },
         "pytz": {
             "version": "==2017.2"
+        },
+        "redis": {
+            "version": "==2.10.5"
         }
     },
-    "develop": {}
+    "develop": {
+        "django": {
+            "version": "==1.11.3"
+        },
+        "django-debug-toolbar": {
+            "version": "==1.8"
+        },
+        "pytz": {
+            "version": "==2017.2"
+        },
+        "sqlparse": {
+            "version": "==0.2.3"
+        }
+    }
 }

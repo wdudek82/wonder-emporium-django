@@ -16,7 +16,7 @@ def product_detail_view(request, product_id=None):
     product = get_object_or_404(Product, id=product_id, available=True)
 
     context = {
-        'product': product
+        'product': product,
     }
     return render(request, 'shop/product_detail.html', context)
 

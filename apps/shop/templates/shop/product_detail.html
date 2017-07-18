@@ -1,14 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Shop | Product {{ product.id }}</title>
-</head>
-<body>
+{% extends 'shop/base.html' %}
+
+{% block title %}
+    {{ block.super }} {{ product.name }}
+{% endblock title %}
+
+{% block content %}
     <h1>{{ product.name }}</h1>
 
-    <p>{{ product.description }}</p>
+    <div>
+        <img id="product_thumb" src={{ product.image.url }}>
+    </div>
+    <div>
+        <p>{{ product.description }}</p>
+    </div>
 
-    <a href="{% url 'shop:product_list' %}">Back to full list</a>
-</body>
-</html>
+    <div>
+        <a href="{% url 'shop:product_list' %}" class="btn btn-default">Back</a>
+    </div>
+{% endblock content %}

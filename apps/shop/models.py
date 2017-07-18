@@ -1,5 +1,7 @@
-from django.db import models
 from django.core.urlresolvers import reverse
+from django.db import models
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 
 
 class Category(models.Model):
@@ -40,3 +42,10 @@ class Product(models.Model):
 
     def get_absolute_url(self):
         return reverse('shop:product_detail', args=[self.id, self.slug])
+
+
+@receiver(post_save, sender=Product)
+def product_post_save_signal(sender, instance, **kwargs):
+    if not instance.image:
+        instance.image = 'products/Placeholder.png'
+        instance.save()
