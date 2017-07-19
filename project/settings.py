@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'debug_toolbar',
 
     # Project's apps
+    'apps.cart',
     'apps.shop',
 ]
 
@@ -86,6 +87,12 @@ CACHES = {
 }
 
 SESSION_ENGINE = 'django.contrib.sessions.backends.cached_db'
+SESSION_COOKIE_AGE = 86400
+SESSION_COOKIE_DOMAIN = 'localhost'
+SESSION_SECURE = False
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False
+SESSION_SAVE_EVERY_REQUEST = True
+
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
@@ -152,3 +159,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'assets', 'media')
 INTERNAL_IPS = [
     '127.0.0.1'
 ]
+
+CART_SESSION_ID = 'cart'

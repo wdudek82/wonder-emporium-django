@@ -1,0 +1,20 @@
+{% extends 'shop/base.html' %}
+
+{% block title %}
+    {{ block.super }} | {{ user.name }}'s Cart
+{% endblock title %}
+
+{% block content %}
+    <h1>{{ user.username }}'s cart</h1>
+
+    <p>
+        {{ cart }}
+    </p>
+
+{#    <ol>#}
+{#        {% for item in cart %}#}
+{#        {% empty %}#}
+{#            Cart is empty#}
+{#        {% endfor %}#}
+{#    </ol>#}
+{% endblock content %}
