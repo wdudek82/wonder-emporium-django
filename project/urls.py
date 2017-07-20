@@ -8,6 +8,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
     # Project's Apps
+    url(r'^cart/', include('apps.cart.urls', namespace='cart')),
     url(r'^shop/', include('apps.shop.urls', namespace='shop')),
 ]
 
