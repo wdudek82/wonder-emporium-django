@@ -1,3 +1,8 @@
 from django.db import models
+from django.contrib import sessions
+from apps.shop.models import Product
 
-# Create your models here.
+
+# class Cart(models.Model):
+#     product = models.ForeignKey(Product)
+#     price = product
