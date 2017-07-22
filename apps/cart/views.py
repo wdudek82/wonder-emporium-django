@@ -1,7 +1,6 @@
 from django.shortcuts import get_object_or_404, redirect, render
 from django.contrib.sessions.models import Session
 from django.views import View
-from django.views.decorators.http import require_POST
 
 from apps.shop.models import Product
 from .models import Cart
@@ -16,7 +15,7 @@ class CartAddView(View):
 
         if form.is_valid():
             cleaned_data = form.cleaned_data
-            cart, created = Cart.objects.get_or_create(product=product, session=session)
+            cart, created = Cart.objects.get_or_create(product=product, price=product.price, session=session)
 
             quantity = cleaned_data['quantity']
             update_quantity = cleaned_data['update']
@@ -38,7 +37,7 @@ class CartRemoveView(View):
         for cart_item in cart:
             product = cart_item.product
             if product.id == int(product_id):
-                product.delete()
+                cart_item.delete()
 
         # return redirect('cart:cart_detail')
         return redirect('shop:product_list')
@@ -53,5 +52,6 @@ class CartDetailView(View):
 
 # TODO: Add missing html template
 # TODO: Make those templates pretty;)
+# TODO: Add custom context manager for cart or custom template tag (e.g. to show cart short info in page header)
 # TODO: Disallow selecting more items than there is in stock
 # TODO: Add tests functional and unit tests!

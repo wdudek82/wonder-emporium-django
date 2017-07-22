@@ -12,7 +12,7 @@ class Cart(models.Model):
     session = models.ForeignKey(Session)
 
     class Meta:
-        unique_together = (('product', 'session'),)
+        unique_together = (('product', 'price', 'session'),)
 
     def __str__(self):
         return '{}:{}:{}:{}'.format(

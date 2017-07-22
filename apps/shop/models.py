@@ -28,6 +28,7 @@ class ProductManager(models.Manager):
         return self.get_queryset().filter(available=True)
 
 
+# TODO: Create upload function that will resize all uploaded images
 class Product(models.Model):
     category = models.ForeignKey(Category, related_name='products')
     name = models.CharField(max_length=200, db_index=True)

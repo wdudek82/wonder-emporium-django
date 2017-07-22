@@ -6,16 +6,16 @@
 
 {% block content %}
 
-    <div class="row">
-        <div class="column">
-            <img id="product_thumb" src="{{ product.image.url }}" style="display:inline-block">
+    <div class="media">
+        <div class="media-left">
+            <img id="product_thumb" class="media-object" src="{{ product.image.url }}" alt="{{ product.name }}">
         </div>
-        <div>
-            <h3>{{ product.name }}</h3>
-
+        <div class="media-body">
+            <h3 class="media-heading">{{ product.name }}</h3>
             <p>Category: <a href="#">{{ product.category }}</a></p>
 
             <p>{{ product.description }}</p>
+            <p>${{ product.price }}</p>
 
             <form action="{% url 'cart:add' product.id %}" method="POST">
                 {% csrf_token %}
@@ -23,14 +23,8 @@
                 <input type="submit" value="Add to cart">
             </form>
 
-            <p>
-                <a href="{% url 'cart:remove' product.id %}" class="btn btn-danger">Remove from cart</a>
-            </p>
+            <a href="{% url 'cart:remove' product.id %}" class="btn btn-danger btn-sm">Remove from cart</a>
         </div>
     </div>
 
-
-    <div>
-        <a href="{% url 'shop:product_list' %}" class="btn btn-default">Back</a>
-    </div>
 {% endblock content %}

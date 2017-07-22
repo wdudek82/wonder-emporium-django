@@ -11,7 +11,9 @@
     <ol>
         {% for product in products %}
             <li id="product-{{ product.id }}">
-                <a href="{% url 'shop:product_detail' product.id %}">{{ product.name }}</a>
+                <a href="{% url 'shop:product_detail' product.id %}" class="">
+                    {{ product.name }}
+                </a>
             </li>
         {% endfor %}
     </ol>
