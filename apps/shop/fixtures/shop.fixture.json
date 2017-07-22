@@ -1,0 +1,114 @@
+[
+{
+  "model": "shop.category",
+  "pk": 1,
+  "fields": {
+    "name": "electronic",
+    "slug": "electronic"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 2,
+  "fields": {
+    "name": "fashion",
+    "slug": "fashion"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 3,
+  "fields": {
+    "name": "food",
+    "slug": "food"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 4,
+  "fields": {
+    "name": "man",
+    "slug": "man"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 5,
+  "fields": {
+    "name": "woman",
+    "slug": "woman"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 6,
+  "fields": {
+    "name": "children",
+    "slug": "children"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 2,
+  "fields": {
+    "category": 1,
+    "name": "Pink Wireless Mouse",
+    "slug": "pink-wireless-mouse",
+    "image": "products/wireless.mouse.jpg",
+    "description": "Wireless Mouse",
+    "price": "5.99",
+    "stock": 2,
+    "available": true,
+    "created": "2017-07-07T18:53:21.834Z",
+    "updated": "2017-07-18T20:32:44.984Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 3,
+  "fields": {
+    "category": 2,
+    "name": "Outworn T-shirt",
+    "slug": "outworn-t-shirt",
+    "image": "products/Placeholder.png",
+    "description": "Old but clean",
+    "price": "5.99",
+    "stock": 4,
+    "available": true,
+    "created": "2017-07-07T20:04:45.980Z",
+    "updated": "2017-07-21T21:09:21.896Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 4,
+  "fields": {
+    "category": 6,
+    "name": "Sanki",
+    "slug": "Sanki",
+    "image": "products/sankidrewniane.jpg",
+    "description": "Wooden sledge",
+    "price": "11.99",
+    "stock": 8,
+    "available": true,
+    "created": "2017-07-07T20:04:45.980Z",
+    "updated": "2017-07-21T21:09:21.896Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 5,
+  "fields": {
+    "category": 1,
+    "name": "Klawiatura",
+    "slug": "Klawiatura",
+    "image": "products/F-122-A01-case-before.JPG",
+    "description": "Szara klawiatura - prawdziwy klasyk!",
+    "price": "11.99",
+    "stock": 8,
+    "available": true,
+    "created": "2017-07-07T20:04:45.980Z",
+    "updated": "2017-07-21T21:09:21.896Z"
+  }
+}
+]

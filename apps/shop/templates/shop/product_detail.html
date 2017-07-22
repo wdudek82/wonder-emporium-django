@@ -5,14 +5,30 @@
 {% endblock title %}
 
 {% block content %}
-    <h1>{{ product.name }}</h1>
 
-    <div>
-        <img id="product_thumb" src={{ product.image.url }}>
+    <div class="row">
+        <div class="column">
+            <img id="product_thumb" src="{{ product.image.url }}" style="display:inline-block">
+        </div>
+        <div>
+            <h3>{{ product.name }}</h3>
+
+            <p>Category: <a href="#">{{ product.category }}</a></p>
+
+            <p>{{ product.description }}</p>
+
+            <form action="{% url 'cart:add' product.id %}" method="POST">
+                {% csrf_token %}
+                {{ cart_product_form }}
+                <input type="submit" value="Add to cart">
+            </form>
+
+            <p>
+                <a href="{% url 'cart:remove' product.id %}" class="btn btn-danger">Remove from cart</a>
+            </p>
+        </div>
     </div>
-    <div>
-        <p>{{ product.description }}</p>
-    </div>
+
 
     <div>
         <a href="{% url 'shop:product_list' %}" class="btn btn-default">Back</a>

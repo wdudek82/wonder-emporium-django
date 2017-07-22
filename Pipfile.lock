@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "9422dd8162570a3ebcf2e749b289f6084d02aa83b5b201559c004963a1ef2057"
+            "sha256": "04708e5a8bdc687ea61fe2a8bc3344dd3e015b541c8777b4688b884e14f0f563"
         },
         "requires": {},
         "sources": [
@@ -12,20 +12,71 @@
         ]
     },
     "default": {
+        "decorator": {
+            "version": "==4.1.1"
+        },
         "django": {
             "version": "==1.11.3"
+        },
+        "django-redis-cache": {
+            "version": "==1.7.1"
+        },
+        "faker": {
+            "version": "==0.7.18"
+        },
+        "ipython": {
+            "version": "==6.1.0"
+        },
+        "ipython-genutils": {
+            "version": "==0.2.0"
+        },
+        "jedi": {
+            "version": "==0.10.2"
         },
         "olefile": {
             "version": "==0.44"
         },
+        "pexpect": {
+            "version": "==4.2.1"
+        },
+        "pickleshare": {
+            "version": "==0.7.4"
+        },
         "pillow": {
             "version": "==4.2.1"
+        },
+        "prompt-toolkit": {
+            "version": "==1.0.14"
+        },
+        "ptyprocess": {
+            "version": "==0.5.2"
+        },
+        "pygments": {
+            "version": "==2.2.0"
+        },
+        "python-dateutil": {
+            "version": "==2.6.1"
         },
         "pytz": {
             "version": "==2017.2"
         },
         "redis": {
             "version": "==2.10.5"
+        },
+        "setuptools": {
+            "version": "==36.2.0"
+        },
+        "simplegeneric": {
+            "version": "==0.8.1"
+        },
+        "six": {
+            "version": "==1.10.0"
+        },
+        "traitlets": {
+            "version": "==4.3.2"
+        },
+        "wcwidth": {
+            "version": "==0.1.7"
         }
     },
     "develop": {
