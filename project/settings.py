@@ -161,3 +161,16 @@ INTERNAL_IPS = [
 ]
 
 CART_SESSION_ID = 'cart'
+
+
+# Proper settings for a given environment
+ENV = os.getenv('DJANGO_ENV')
+
+if ENV == 'prod':
+    # from conf import production.py
+    DEBUG = False
+    ALLOWED_HOSTS = ['*']
+elif ENV == 'dev':
+    # from conf import development.py
+    DEBUG = True
+    ALLOWED_HOSTS = []

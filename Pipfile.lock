@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "04708e5a8bdc687ea61fe2a8bc3344dd3e015b541c8777b4688b884e14f0f563"
+            "sha256": "69a3416f112af0263be90393df5409b2799f912dfea13fbe63140c93c081ad0b"
         },
         "requires": {},
         "sources": [
@@ -13,7 +13,7 @@
     },
     "default": {
         "decorator": {
-            "version": "==4.1.1"
+            "version": "==4.1.2"
         },
         "django": {
             "version": "==1.11.3"
@@ -64,7 +64,7 @@
             "version": "==2.10.5"
         },
         "setuptools": {
-            "version": "==36.2.0"
+            "version": "==36.2.2"
         },
         "simplegeneric": {
             "version": "==0.8.1"
@@ -74,6 +74,9 @@
         },
         "traitlets": {
             "version": "==4.3.2"
+        },
+        "uwsgi": {
+            "version": "==2.0.15"
         },
         "wcwidth": {
             "version": "==0.1.7"
