@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+from django.utils.html import mark_safe
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -31,6 +32,9 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    # 'django.contrib.contenttypes',
+    # 'grappelli.dashboard',
+    'grappelli',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -43,6 +47,7 @@ INSTALLED_APPS = [
 
     # Project's apps
     'apps.cart',
+    'apps.orders',
     'apps.shop',
 ]
 
@@ -174,3 +179,11 @@ elif ENV == 'dev':
     # from conf import development.py
     DEBUG = True
     ALLOWED_HOSTS = []
+
+if DEBUG:
+    title_color = '#FF462E'
+else:
+    title_color = '#5998FF'
+
+
+GRAPPELLI_ADMIN_TITLE = mark_safe(f'<span style="color:{title_color}; font-weight: 900;">Wonder Emporium</span>')
