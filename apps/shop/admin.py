@@ -13,7 +13,7 @@ class CategoryAdmin(admin.ModelAdmin):
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     list_display = ['id', 'name', 'slug', 'description', 'category', 'get_image', 'price', 'stock', 'available',
-                    'created', 'updated']
+                    'created', 'updated', 'is_new']
     list_display_links = ['name']
     list_editable = ['price', 'stock', 'available']
     prepopulated_fields = {'slug': ('name',)}

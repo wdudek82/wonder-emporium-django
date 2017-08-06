@@ -2,6 +2,7 @@ from django.core.urlresolvers import reverse
 from django.db import models
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from django.utils import timezone
 
 
 class Category(models.Model):
@@ -50,6 +51,16 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+    def is_new(self):
+        """
+        If item was added in less than 3 days ago it sets "new" flag to True
+        :return: boolean
+        """
+        today = timezone.now()
+        delta = today - timezone.timedelta(days=3)
+        return self.created > delta
+    is_new.short_description = 'New'
 
     def get_absolute_url(self):
         return reverse('shop:product_detail', args=[self.id, self.slug])
