@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "69a3416f112af0263be90393df5409b2799f912dfea13fbe63140c93c081ad0b"
+            "sha256": "51efb71efa3f478b021fd4d95a9a7b24bee67d8914dbcdbbfe2421e25866351f"
         },
         "requires": {},
         "sources": [
@@ -16,7 +16,7 @@
             "version": "==4.1.2"
         },
         "django": {
-            "version": "==1.11.3"
+            "version": "==1.11.4"
         },
         "django-redis-cache": {
             "version": "==1.7.1"
@@ -46,7 +46,7 @@
             "version": "==4.2.1"
         },
         "prompt-toolkit": {
-            "version": "==1.0.14"
+            "version": "==1.0.15"
         },
         "ptyprocess": {
             "version": "==0.5.2"
@@ -64,7 +64,7 @@
             "version": "==2.10.5"
         },
         "setuptools": {
-            "version": "==36.2.2"
+            "version": "==36.2.7"
         },
         "simplegeneric": {
             "version": "==0.8.1"
@@ -84,7 +84,7 @@
     },
     "develop": {
         "django": {
-            "version": "==1.11.3"
+            "version": "==1.11.4"
         },
         "django-debug-toolbar": {
             "version": "==1.8"

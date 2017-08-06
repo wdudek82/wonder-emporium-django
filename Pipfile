@@ -6,10 +6,12 @@ verify_ssl = true
 django-debug-toolbar = "*"
 
 [packages]
-Django = "*"
-Pillow = "*"
+django = "*"
+pillow = "*"
 redis = "*"
 django-redis-cache = "*"
 ipython = "*"
-Faker = "*"
-uWSGI = "*"
+faker = "*"
+uwsgi = "*"
+celery = "*"
+django-grappelli = "*"
